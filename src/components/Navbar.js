@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import logo from './images/logo.png'
+import logo from './images/header.png'
 
 import './Navbar.css'
 
@@ -30,10 +30,13 @@ const Navbar = () => {
                         <a href='#about' onClick={closeMenu}>About</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#testimonials' onClick={closeMenu}>Testimonials</a>
+                        <a href='#retreats' onClick={closeMenu}>Retreats</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#demo' onClick={closeMenu}>Demo</a>
+                        <a href='#picnic' onClick={closeMenu}>Picnic</a>
+                    </li>
+                    <li className='nav-item'>
+                        <a href='#contact' onClick={closeMenu}>Contact</a>
                     </li>
                 </ul>
             </nav>

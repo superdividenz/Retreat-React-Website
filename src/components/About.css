@@ -9,11 +9,12 @@
     width: 1240px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
 }
 
 .about h2 {
     font-size: 3rem;
+    display: flex;
+    justify-content: center;
 }
 
 .about .col-2 {
@@ -35,7 +36,8 @@
 }
 
 .about button {
-    margin-top: 1rem;
+    margin: 1rem;
+    justify-content: center;
 }
 
 @media screen and (max-width:940px) {
@@ -56,9 +58,6 @@
         padding: 0;
     }
 
-    .about button {
-        margin-bottom: 1rem;
-    }
 }
 
 

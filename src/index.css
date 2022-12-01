@@ -23,6 +23,10 @@ body {
   line-height: 1.2;
 }
 
+page {
+  display: block;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -46,6 +50,7 @@ a {
   border: 1px solid var(--primary-color);
   border-radius: 4px;
   cursor: pointer;
+  display: block;
 }
 
 .button:hover {
