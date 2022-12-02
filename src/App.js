@@ -2,8 +2,9 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
-import Testimonials from './components/Testimonials'
-import Demo from './components/Demo'
+import Retreats from './components/Retreats'
+import Picnic from './components/Picnic'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
@@ -12,8 +13,9 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Testimonials />
-      <Demo />
+      <Retreats />
+      <Picnic />
+      <Contact />
       <Footer />
     </div>
   );

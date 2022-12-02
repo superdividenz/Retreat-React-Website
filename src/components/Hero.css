@@ -9,6 +9,8 @@
 .hero:before {
     content: '';
     background: url('./images/home.jpeg') no-repeat center center/cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -28,14 +30,14 @@
 }
 
 .hero .content p:first-child {
-    text-shadow: 2px 2px #838383;
+    text-shadow: 2px 3px #404040;
     font-weight: 500;
     font-size: 3.9rem;
 }
 
 .hero .content p:nth-child(2) {
     font-size: 1.9rem;
-    text-shadow: 1px 1px #838383;
+    text-shadow: 1px 2px #404040;
 
 }
 

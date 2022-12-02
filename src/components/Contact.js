@@ -1,9 +1,9 @@
 import React from 'react'
-import './Demo.css'
+import './Contact.css'
 
-const Demo = () => {
+const Contact = () => {
     return (
-        <div className='demo' id='demo'>
+        <div className='demo' id='contact'>
             <div className='container'>
                 <div className='col-1'>
                     <p>More Than 100 Financial Planners,</p>
@@ -19,4 +19,4 @@ const Demo = () => {
     )
 }
 
-export default Demo
+export default Contact
