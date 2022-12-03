@@ -6,6 +6,7 @@ import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import './Contact.css'
 
 
 const styles = {
@@ -75,79 +76,79 @@ export class ContactForm extends Component {
                 <Typography variant="h4" align="center" component="h1" gutterBottom>
                     {'Contact Us'.toUpperCase()}
                 </Typography>
-                <Grid container direction="column" justify="center" alignItems="center">
-                    <Grid item>
-                        <form
-                        id="contact-form"
-                        className={classes.contactForm}
-                        onSubmit={this.handleSubmit}
-                        >
-                            <Grid item>
-                                <TextField
-                                fullWidth
-                                required
-                                id="name"
-                                label="Name"
-                                name="userName"
-                                className={classes.inputField}
-                                onChange={this.handleChange("userName")}
-                                margin="normal"
-                                />
-                            </Grid>
-                            <Grid item>
-                                <TextField
-                                fullWidth
-                                required
-                                id="email"
-                                label="Email"
-                                name="email"
-                                className={classes.inputField}
-                                onChange={this.handleChange("email")}
-                                margin="normal"
-                                />
-                            </Grid>
-                            <Grid item>
-                                <TextField
-                                fullWidth
-                                required
-                                id="message"
-                                label="Message"
-                                name="message"
-                                className={classes.inputField}
-                                onChange={this.handleChange("message")}
-                                margin="normal"
-                                multiline
-                                rowsMax="4"
-                                />
-                            </Grid>
-                            <Grid container direction="row" spacing={2} style={{ marginTop: 20 }}>
-                            <Grid item >
-                                <Button
-                                className={classes.formButton}
-                                type="reset"
-                                variant="contained"
-                                color="default"
-                                //disabled={submitting || pristine}
-                                >
-                                RESET
-                                </Button>
-                            </Grid>
-                            <Grid item >  
-                                <Button
-                                className={classes.formButton}
-                                type="submit"
-                                variant="contained"
-                                color="primary"
-                                >
-                                Submit
-                                </Button>
-                            </Grid>
-                            </Grid>
-                        </form>
-                    </Grid>
-                </Grid>
-
-                
+                <div className='card'>
+                  <Grid container direction="column" justify="center" alignItems="center">
+                      <Grid item>
+                          <form
+                          id="contact-form"
+                          className={classes.contactForm}
+                          onSubmit={this.handleSubmit}
+                          >
+                              <Grid item>
+                                  <TextField
+                                  fullWidth
+                                  required
+                                  id="name"
+                                  label="Name"
+                                  name="userName"
+                                  className={classes.inputField}
+                                  onChange={this.handleChange("userName")}
+                                  margin="normal"
+                                  />
+                              </Grid>
+                              <Grid item>
+                                  <TextField
+                                  fullWidth
+                                  required
+                                  id="email"
+                                  label="Email"
+                                  name="email"
+                                  className={classes.inputField}
+                                  onChange={this.handleChange("email")}
+                                  margin="normal"
+                                  />
+                              </Grid>
+                              <Grid item>
+                                  <TextField
+                                  fullWidth
+                                  required
+                                  id="message"
+                                  label="Message"
+                                  name="message"
+                                  className={classes.inputField}
+                                  onChange={this.handleChange("message")}
+                                  margin="normal"
+                                  multiline
+                                  rowsMax="4"
+                                  />
+                              </Grid>
+                              <Grid container direction="row" spacing={2} style={{ marginTop: 20 }}>
+                              <Grid item >
+                                  <Button
+                                  className={classes.formButton}
+                                  type="reset"
+                                  variant="contained"
+                                  color="default"
+                                  //disabled={submitting || pristine}
+                                  >
+                                  RESET
+                                  </Button>
+                              </Grid>
+                              <Grid item >  
+                                  <Button
+                                  className={classes.formButton}
+                                  type="submit"
+                                  variant="contained"
+                                  color="primary"
+                                  >
+                                  Submit
+                                  </Button>
+                              </Grid>
+                              </Grid>
+                          </form>
+                      </Grid>
+                  </Grid>
+                </div>
             </div> 
                       
         );
