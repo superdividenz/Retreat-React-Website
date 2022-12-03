@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import logo from './images/header.png'
-
+import { Link, animateScroll as scroll } from "react-scroll";
 import './Navbar.css'
+
 
 const Navbar = () => {
 
@@ -23,20 +24,65 @@ const Navbar = () => {
 
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    <li className='nav-item'>
-                        <a href='/' onClick={closeMenu}>Home</a>
+                    <li className="nav-item">
+                    <Link
+                        activeClass="active"
+                        to="hero"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        Home
+                    </Link>
                     </li>
-                    <li className='nav-item'>
-                        <a href='#about' onClick={closeMenu}>About</a>
+                    <li className="nav-item">
+                    <Link
+                        activeClass="active"
+                        to="about"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        About
+                    </Link>
                     </li>
-                    <li className='nav-item'>
-                        <a href='#retreats' onClick={closeMenu}>Retreats</a>
+                    <li className="nav-item">
+                    <Link
+                        activeClass="active"
+                        to="retreats"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        Retreats
+                    </Link>
                     </li>
-                    <li className='nav-item'>
-                        <a href='#picnic' onClick={closeMenu}>Picnic</a>
+                    <li className="nav-item">
+                    <Link
+                        activeClass="active"
+                        to="picnic"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        Picnic
+                    </Link>
                     </li>
-                    <li className='nav-item'>
-                        <a href='#contact' onClick={closeMenu}>Contact</a>
+                    <li className="nav-item">
+                    <Link
+                        activeClass="active"
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        Contact
+                    </Link>
                     </li>
                 </ul>
             </nav>
