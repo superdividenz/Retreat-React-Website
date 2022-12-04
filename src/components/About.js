@@ -5,13 +5,12 @@ const About = () => {
     return (
         <div className='about' id='about'>
             <div className='container'>
-                <div className='col-10'>
-            <h2 className='page'>About</h2>
-                         <span className='line'></span>
-                         <button className='button'>Map</button>
-                         <p>– quiet, serene and the real “home” of our family. Built in 1996.</p>
-                         
-                 <p>LAKE OF DREAMS IS A SPECIAL PLACE</p>
+              <h2>About</h2>
+              <span className='line'></span>
+
+            <div className='content'>
+             <div className='card'>
+                <p>LAKE OF DREAMS IS A SPECIAL PLACE</p><p>– quiet, serene and the real “home” of our family. Built in 1996.</p>
                  <p>We were attracted to the site as our family became avid recreational water sport enthusiasts. The recreational aspect became more 
                  serious when our neighbors began coaching our youngest sons to become competitive water skiers before the age of 10. Since then, 
                  water skiing has become a huge part of our family life and Lake of Dreams has hosted many clinics, camps and competitions for kids 
@@ -51,8 +50,9 @@ const About = () => {
                  share in the experience of Lake of Dreams retreats and thereby contribute to the spiritual energy that is replacing the negative and destructive 
                  energy that existed prior to recovery.</p>
                  <p>Our desire is to see this spiritual energy build for generations to come. Paul D. Melnuk Recovery Capital</p>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
     )
 }

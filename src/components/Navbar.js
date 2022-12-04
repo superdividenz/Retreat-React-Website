@@ -84,6 +84,18 @@ const Navbar = () => {
                         Contact
                     </Link>
                     </li>
+                    <li className="nav-item">
+                    <Link
+                        activeClass="active"
+                        to="test"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        Test
+                    </Link>
+                    </li>
                 </ul>
             </nav>
         </div>

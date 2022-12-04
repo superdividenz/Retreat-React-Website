@@ -1,18 +1,25 @@
 import React from 'react'
-import front from './images/front.png'
 import './Picnic.css'
 
 const Picnic = () => {
     return (
         <div className='picnic' id='picnic'>
             <div className='container'>
-                <div className='col-1'>
-                    <p>Annual LODI Picnic</p>
-                    <p>Lake of Dreams picnic has been an annual event.</p>
-                    <button className='button'>Picnic</button>
-                </div>
-                <div className='col-2'>
-                <img src={front} alt="front" style={{ width: '400px', }}/>
+                <h2>Picnic</h2>
+                <span className='line'></span>
+                <div className='content'>
+                    <div className='card'>
+
+                        <p>It is not every day that you come across a passionate and trustworthy financial advisor. John Doe is true professional who does his work really well. Thanks John!</p>
+                        <p><span>Johnson.M.J.</span></p>
+                        <p>Director of "Financial Times"</p>
+                    </div>
+                    <div className='card'>
+
+                        <p>In just 2 very short meetings with John he managed to find the solution personally catered to my situation and expectations. Punctual, well informed and very reliable.</p>
+                        <p><span>Carol Harper</span></p>
+                        <p>Director at Risktec Solutions Ltd</p>
+                    </div>
                 </div>
             </div>
         </div>

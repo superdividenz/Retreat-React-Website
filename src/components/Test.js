@@ -1,11 +1,12 @@
-import React from 'react'
-import './Retreats.css'
 
-const Retreats = () => {
+import React from 'react'
+import './Test.css'
+
+const Test = () => {
     return (
-        <div className='retreats' id='retreats'>
+        <div className='test' id='test'>
             <div className='container'>
-                <h2>Retreats</h2>
+                <h2>Test</h2>
                 <span className='line'></span>
                 <div className='content'>
                     <div className='card'>
@@ -26,4 +27,4 @@ const Retreats = () => {
     )
 }
 
-export default Retreats
+export default Test
