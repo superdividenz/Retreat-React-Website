@@ -5,8 +5,9 @@ import About from './components/About'
 import Retreats from './components/Retreats'
 import Picnic from './components/Picnic'
 import Contact from './components/Contact'
-import Test from './components/Test'
+import Modal from './components/Modal'
 import Footer from './components/Footer'
+
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <Retreats />
       <Picnic />
       <Contact />
-      <Test />
+      <Modal />
       <Footer />
     </div>
   );
