@@ -1,70 +1,81 @@
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import React from 'react';
-import './Contact.css';
-import { Grid, TextField, Button, Card, CardContent, Typography } from '@material-ui/core';
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
-
-const render = (status: Status) => {
-    return <h1>{status}</h1>;
-    };
-
-function Contact() {
-
+function Copyright() {
   return (
-    <div className="Contact" id="contact"> 
-      <Grid container>
-          
-        <Grid item xs={12} md={6}>
-        <Card style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto" }}>
-          <CardContent>
-            <Typography gutterBottom variant="h5">
-              Contact
-          </Typography> 
-            <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
-              Fill up the form and our team will get back to you within 24 hours.
-          </Typography> 
-            <form>
-              <Grid container spacing={1}>
-                <Grid xs={12} sm={6} item>
-                  <TextField placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
-                </Grid>
-                <Grid xs={12} sm={6} item>
-                  <TextField placeholder="Enter last name" label="Last Name" variant="outlined" fullWidth required />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField type="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField type="number" placeholder="Enter phone number" label="Phone" variant="outlined" fullWidth required />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
-                </Grid>
-                <Grid item xs={12}>
-                  <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
-                </Grid>
-
-              </Grid>
-            </form>
-          </CardContent>
-        </Card>
-        </Grid>
-        <Grid item xs={12} md={6}>
-        <Card style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto" }}>
-        <CardContent>
-        <Typography gutterBottom variant="h5">
-              Contact
-            </Typography>
-        </CardContent>
-            {/* <Wrapper apiKey={"YOUR_API_KEY"} render={render}>
-            <YourComponent/>
-            </Wrapper> */}
-        </Card>
-        </Grid>
-        
-      </Grid>
-    </div>
+    <Typography variant="body2" color="text.secondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
   );
 }
 
-export default Contact;
+const cards = [1, 2, 3];
+
+const theme = createTheme();
+
+export default function Album() {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      
+      <main>
+
+        {/* Hero unit */}
+        <Box
+          sx={{
+            bgcolor: 'background.paper',
+            pt: 8,
+            pb: 6,
+          }}
+        >
+          <Container maxWidth="sm" id='contact'>
+            <Typography
+              component="h1"
+              variant="h2"
+              align="center"
+              color="text.primary"
+              gutterBottom
+            >
+              Contact
+            </Typography>
+            <Typography variant="h5" align="center" color="text.secondary" paragraph>
+              Lake of Dreams
+            </Typography>
+            <Stack
+              sx={{ pt: 4 }}
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+            >
+              <Button variant="contained">Contact</Button>
+              <Button variant="outlined">Retreats</Button>
+            </Stack>
+          </Container>
+        </Box>
+        <Container sx={{ py: 8 }} maxWidth="md">
+          {/* End hero unit */}
+
+          
+        </Container>
+      </main>
+      
+    </ThemeProvider>
+  );
+}

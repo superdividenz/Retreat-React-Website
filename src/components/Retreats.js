@@ -1,29 +1,79 @@
-import React from 'react'
-import './Retreats.css'
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal'
+import CssBaseline from '@mui/material/CssBaseline';
+import Stack from '@mui/material/Stack';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const Retreats = () => {
-    return (
-        <div className='retreats' id='retreats'>
-            <div className='container'>
-                <h2>Retreats</h2>
-                <span className='line'></span>
-                <div className='content'>
-                    <div className='card'>
 
-                        <p>It is not every day that you come across a passionate and trustworthy financial advisor. John Doe is true professional who does his work really well. Thanks John!</p>
-                        <p><span>Johnson.M.J.</span></p>
-                        <p>Director of "Financial Times"</p>
-                    </div>
-                    <div className='card'>
-
-                        <p>In just 2 very short meetings with John he managed to find the solution personally catered to my situation and expectations. Punctual, well informed and very reliable.</p>
-                        <p><span>Carol Harper</span></p>
-                        <p>Director at Risktec Solutions Ltd</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+function Copyright() {
+  return (
+    <Typography variant="body2" color="text.secondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
 }
 
-export default Retreats
+
+
+const theme = createTheme();
+
+export default function Album() {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      
+      <main>
+
+        {/* Hero unit */}
+        <Box
+          sx={{
+            bgcolor: 'background.paper',
+            pt: 8,
+            pb: 6,
+          }}
+        >
+          <Container maxWidth="sm" id='retreats'>
+            <Typography
+              component="h1"
+              variant="h2"
+              align="center"
+              color="text.primary"
+              gutterBottom
+            >
+              Retreats
+            </Typography>
+            <Typography variant="h5" align="center" color="text.secondary" paragraph>
+              Lake of Dreams
+            </Typography>
+            <Stack
+              sx={{ pt: 4 }}
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+            >
+              <Button variant="contained">Contact</Button>
+              <Button variant="outlined">Retreats</Button>
+              {/* <Button onClick={handleOpen}>Open modal</Button> */}
+                  
+            </Stack>
+            
+
+          </Container>
+        </Box>
+
+        
+      </main>
+      
+    </ThemeProvider>
+  );
+}

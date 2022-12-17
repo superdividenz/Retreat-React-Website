@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import logo from './images/header.png'
 import { Link, animateScroll as scroll } from "react-scroll";
-import Avatar from '@mui/material/Avatar';
-import './Navbar.css'
+import './Styles.css'
 
 
 const Navbar = () => {
@@ -88,13 +87,13 @@ const Navbar = () => {
                     <li className="nav-item">
                     <Link
                         activeClass="active"
-                        to="test"
+                        to="signin"
                         spy={true}
                         smooth={true}
                         offset={-70}
                         duration={500}
                     >
-                        Test
+                        Signin
                     </Link>
                     </li>
                 </ul>
