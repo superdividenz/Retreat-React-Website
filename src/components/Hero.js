@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -22,15 +23,16 @@ const Hero = () => {
     const handleOpen = () => setModalOpenState(true);
     const handleClose = () => setModalOpenState(false);
     return (
+      
         <div className='hero'>
             <div className='content'>
                 <p>LAKE OF DREAMS</p>
                 <p>WINTER RETREATS SIGNUP OPEN</p>
-                <button href='/' className='button'>Retreat Signup</button>
-                <Button onClick={handleOpen}>Open modal</Button>
+                <Button variant="contained" onClick={handleOpen}>Retreats</Button>
+               
             </div>
             <div>
-      {/* <Button onClick={handleOpen}>Open modal</Button> */}
+            
       <Modal
         open={modalOpenState}
         onClose={handleClose}
