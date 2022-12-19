@@ -18,7 +18,6 @@ function App() {
       <Picnic />
       <Contact />
       <Signin /> 
-
       <Footer />
     </div>
   );
