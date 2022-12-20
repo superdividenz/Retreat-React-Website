@@ -53,15 +53,7 @@ export default function Album() {
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               Lake of Dreams
             </Typography>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained">Contact</Button>
-              <Button variant="outlined">Retreats</Button>
-            </Stack>
+            
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">

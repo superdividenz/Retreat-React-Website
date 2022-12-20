@@ -5,7 +5,6 @@ import About from './components/About'
 import Retreats from './components/Retreats'
 import Picnic from './components/Picnic'
 import Contact from './components/Contact'
-import Signin from './components/Signin'
 import Footer from './components/Footer'
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
       <Retreats />
       <Picnic />
       <Contact />
-      <Signin /> 
       <Footer />
     </div>
   );
