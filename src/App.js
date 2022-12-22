@@ -17,7 +17,6 @@ function App() {
       <Retreats />
       <Picnic />
       <Contact />
-      <Drawer />
       <Footer />
     </div>
   );

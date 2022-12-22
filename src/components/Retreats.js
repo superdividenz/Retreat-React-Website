@@ -7,21 +7,7 @@ import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
+import Divider from '@mui/material/Divider';
 
 
 const theme = createTheme();
@@ -30,8 +16,7 @@ export default function Album() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      
-      <main>
+      <Divider variant="middle" sx={{borderBottomWidth: 6}}/>
 
         {/* Hero unit */}
         <Box
@@ -42,17 +27,21 @@ export default function Album() {
           }}
         >
           <Container maxWidth="sm" id='retreats'>
+
+          
+
             <Typography
-              component="h1"
+              marginTop={5}
+              component="h2"
               variant="h2"
               align="center"
-              color="text.primary"
-              gutterBottom
+              textColor="neutral.500"
+              fontWeight= "500"
             >
               Retreats
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Lake of Dreams
+              Mens and Womens Retreat dates
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -61,8 +50,6 @@ export default function Album() {
               justifyContent="center"
             >
               <Button variant="contained">Contact</Button>
-              <Button variant="outlined">Retreats</Button>
-              {/* <Button onClick={handleOpen}>Open modal</Button> */}
                   
             </Stack>
             
@@ -70,9 +57,8 @@ export default function Album() {
           </Container>
         </Box>
 
-        
-      </main>
-      
+
+
     </ThemeProvider>
   );
 }
