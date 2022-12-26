@@ -41,7 +41,7 @@ const Hero = () => {
             pb: 6,
           }}
         >
-          <Container maxWidth="sm" id='retreats'>
+          <Container maxWidth="sm" id='hero'>
             <Typography
               marginTop={20}
               component="h2"

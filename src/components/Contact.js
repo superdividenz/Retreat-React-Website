@@ -23,7 +23,7 @@ export default function Contact() {
   return (
 
     
-    <Container maxWidth="sm" id='contact'>
+    <Container maxWidth="lg" id='contact'>
          <ThemeProvider theme={theme}>
 
       <Divider variant="middle" sx={{borderBottomWidth: 6}}/>
