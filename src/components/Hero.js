@@ -28,11 +28,6 @@ const Hero = () => {
   const handleOpen = () => setModalOpenState(true);
   const handleClose = () => setModalOpenState(false);
 
-  // const Contact = () => {
-  //   const [modalOpenState, setModalOpenState] = React.useState(false);
-  //   const contactOpen = () => setModalOpenState(true);
-  //   const contactClose = () => setModalOpenState(false);
-
   return (
     <div className='hero'>
         <ThemeProvider theme={theme}>
@@ -66,7 +61,7 @@ const Hero = () => {
               spacing={2}
               justifyContent="center"
             >
-              {/* <Button variant="contained" onClick={contactOpen}>Contact</Button> */}
+
               <Button variant="contained" onClick={handleOpen}>Retreats</Button>
                   
             </Stack>
@@ -83,7 +78,7 @@ const Hero = () => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Retreat Sign Up Form
+            
           </Typography>
         </Box>
       </Modal>

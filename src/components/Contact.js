@@ -1,100 +1,69 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-
-import Stack from '@mui/material/Stack';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Modal from '@mui/material/Modal';
 import Divider from '@mui/material/Divider';
-
-import ContactForm from './ContactForm';
-
-
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
+import Typography from '@mui/material/Typography';
 
 const theme = createTheme();
 
-const Contact = () => {
-  const [modalOpenState, setModalOpenState] = React.useState(false);
-  const contactOpen = () => setModalOpenState(true);
-  const contactClose = () => setModalOpenState(false);
-  return (
-    <div className='contact'>
-   
-        <ThemeProvider theme={theme}>
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
-        <Divider variant="middle" sx={{borderBottomWidth: 6}}/>
-      
+
+export default function Contact() {
+  return (
+
+    
+    <Container maxWidth="sm" id='contact'>
+         <ThemeProvider theme={theme}>
+
+      <Divider variant="middle" sx={{borderBottomWidth: 6}}/>
 
         {/* Hero unit */}
-        <Box
+          <Box
           sx={{
             pt: 8,
             pb: 6,
           }}
-        >
-          <Container maxWidth="sm" id='retreats'>
+        ></Box>
 
-          
-
-            <Typography
-              marginTop={5}
-              component="h2"
-              variant="h2"
-              align="center"
-              textColor="neutral.500"
-              fontWeight= "500"
-            >
-              Contact
-            </Typography>
-            <Typography variant="h5" align="center" textColor="neutral.500" paragraph>
-              Lake of Dreams
-            </Typography>
-            <Stack
-              sx={{pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained" onClick={contactOpen}>Contact Us</Button>
-                  
-            </Stack>
-            
-
-          </Container>
-        </Box>
-
-        <Modal
-        open={modalOpenState}
-        onClose={contactClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+      <Typography
+        component="h2"
+        variant="h2"
+        align="center"
+        textColor="neutral.500"
+        fontWeight= "500"
       >
-        <Box sx={style}>
+        Contact
+      </Typography>
+      <Typography variant="h5" align="center" color="text.secondary" paragraph>
+        Contact Us
+      </Typography>
+    
+          <Box sx={{ flexGrow: 1 }}>
+             <Grid container spacing={2}>
+               <Grid item xs={6} marginBottom={4}>
+                 <Item>Contact Form</Item>
+               </Grid>
+             <Grid item xs={6} marginBottom={4}>
+               <Item>Map</Item>
+             </Grid>
+            </Grid>
+          </Box>
 
-          {/* import contact form */}
-              <ContactForm />
-
-        </Box>
-      </Modal>
-
-      
     </ThemeProvider>
-    </div>
+
+    </Container>
+
     
   );
 }
-export default Contact;
