@@ -1,15 +1,14 @@
 import React from 'react'
-import './Hero.css'
+import './css/Hero.css'
+
 
 const Hero = () => {
     return (
         <div className='hero'>
             <div className='content'>
-                <p>Call us</p>
-                <p>1-800-123-4567</p>
-                <p>Because Money</p>
-                <p>Doesn't come with instructions</p>
-                <button href='/' className='button'>Free Consultation</button>
+                <p>LAKE OF DREAMS</p>
+                <p>WINTER RETREATS SIGNUP OPEN</p>
+                <button href='/' className='button'>Retreat Signup</button>
             </div>
         </div>
     )

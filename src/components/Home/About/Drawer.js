@@ -1,69 +1,37 @@
-node_modules
-import React from 'react'
-import './Styles.css'
-import Button from '@mui/material/Button';
+<<<<<<< Updated upstream:src/components/Home/About/Drawer.js
+import * as React from 'react';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+=======
+import React from 'react'
+import './css/About.css'
+>>>>>>> Stashed changes:src/components/About.js
 
+export default function Drawers() {
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: true,
+    right: false,
+  });
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
   };
 
-const Hero = () => {
-    const [modalOpenState, setModalOpenState] = React.useState(false);
-    const handleOpen = () => setModalOpenState(true);
-    const handleClose = () => setModalOpenState(false);
-    return (
-      
-        <div className='hero'>
-            <div className='content'>
-                <p>LAKE OF DREAMS</p>
-                <p>WINTER RETREATS SIGNUP OPEN</p>
-                <Button variant="contained" onClick={handleOpen}>Retreats</Button>
-               
-            </div>
-            <div>
-            
-      <Modal
-        open={modalOpenState}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
-        </Box>
-      </Modal>
-    </div>
-        </div>
-    )
-}
-
-export default Hero
-
-
-<div className='container'>
-              <h2>About</h2>
-              <span className='line'></span>
-
-            <div className='content'>
-             <div className='card'>
-                <p>LAKE OF DREAMS IS A SPECIAL PLACE</p><p>– quiet, serene and the real “home” of our family. Built in 1996.</p>
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+                    <p>LAKE OF DREAMS IS A SPECIAL PLACE</p><p>– quiet, serene and the real “home” of our family. Built in 1996.</p>
                  <p>We were attracted to the site as our family became avid recreational water sport enthusiasts. The recreational aspect became more 
                  serious when our neighbors began coaching our youngest sons to become competitive water skiers before the age of 10. Since then, 
                  water skiing has become a huge part of our family life and Lake of Dreams has hosted many clinics, camps and competitions for kids 
@@ -103,6 +71,25 @@ export default Hero
                  share in the experience of Lake of Dreams retreats and thereby contribute to the spiritual energy that is replacing the negative and destructive 
                  energy that existed prior to recovery.</p>
                  <p>Our desire is to see this spiritual energy build for generations to come. Paul D. Melnuk Recovery Capital</p>
-              </div>
-            </div>
-          </div>
+
+
+    </Box>
+  );
+
+  return (
+    <div>
+      {['bottom'].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <Drawer
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+          >
+            {list(anchor)}
+          </Drawer>
+        </React.Fragment>
+      ))}
+    </div>
+  );
+}

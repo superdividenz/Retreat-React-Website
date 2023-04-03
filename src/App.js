@@ -1,10 +1,13 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Testimonials from './components/Testimonials'
-import Demo from './components/Demo'
+import Hero from './components/Home/Hero'
+import About from './components/Home/About'
+import Retreats from './components/Home/Retreats'
+import Picnic from './components/Home/Picnic'
+import Contact from './components/Home/Contact'
 import Footer from './components/Footer'
+
+
 
 function App() {
   return (
@@ -12,8 +15,9 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Testimonials />
-      <Demo />
+      <Retreats />
+      <Picnic />
+      <Contact />
       <Footer />
     </div>
   );
