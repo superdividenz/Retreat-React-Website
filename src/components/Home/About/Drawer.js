@@ -1,7 +1,12 @@
+<<<<<<< Updated upstream:src/components/Home/About/Drawer.js
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
+=======
+import React from 'react'
+import './css/About.css'
+>>>>>>> Stashed changes:src/components/About.js
 
 export default function Drawers() {
   const [state, setState] = React.useState({

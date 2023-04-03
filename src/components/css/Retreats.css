@@ -1,0 +1,69 @@
+.retreats {
+    width: 100%;
+}
+
+.retreats .container {
+    width: 1240px;
+    margin: 4rem auto;
+    padding: 4rem 0rem;
+}
+
+.retreats h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.retreats .container .content {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    margin: 4rem 0;
+}
+
+.retreats .card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgb(0,0,0,.2);
+    padding: 1rem;
+}
+
+.retreats img {
+    border-radius: 50px;
+    margin-top: -2rem;
+}
+
+
+.retreats .card p {
+    color: #787878;
+    font-size: 1.1rem;
+    margin: 12px;
+}
+
+.retreats .card span {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 940px) {
+    .retreats .container {
+        width: 100%;
+    }
+
+    .retreats .container .content {
+        grid-template-columns: 1fr;
+    }
+
+    .retreats .card {
+        max-width: 100%;
+        margin: 1rem;
+    }
+}
+
+
+
+
+
+
+
+

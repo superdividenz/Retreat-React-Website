@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import logo from './images/header.png'
 import { Link, animateScroll as scroll } from "react-scroll";
+<<<<<<< Updated upstream
 import './Styles.css'
+=======
+import './css/Navbar.css'
+>>>>>>> Stashed changes
 
 
 const Navbar = () => {
@@ -84,6 +88,21 @@ const Navbar = () => {
                         Contact
                     </Link>
                     </li>
+<<<<<<< Updated upstream
+=======
+                    <li className="nav-item">
+                    <Link
+                        activeClass="active"
+                        to="map"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        Test
+                    </Link>
+                    </li>
+>>>>>>> Stashed changes
                 </ul>
             </nav>
         </div>

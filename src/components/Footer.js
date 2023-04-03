@@ -1,5 +1,9 @@
 import React from 'react'
+<<<<<<< Updated upstream
 import './Styles.css'
+=======
+import './css/Footer.css'
+>>>>>>> Stashed changes
 
 const Footer = () => {
     return (
