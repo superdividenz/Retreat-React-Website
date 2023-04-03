@@ -7,6 +7,7 @@ import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Modal from '@mui/material/Modal';
+import SignUp from '../Retreats/SignUp';
 
 
 const style = {
@@ -78,7 +79,7 @@ const Hero = () => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            
+          <SignUp />
           </Typography>
         </Box>
       </Modal>

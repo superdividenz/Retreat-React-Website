@@ -7,6 +7,8 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
+import GoogleMap from '../ContactUs/GoogleMap';
+import ContactUs from '../ContactUs/ContactUs';
 
 const theme = createTheme();
 
@@ -19,11 +21,11 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
-export default function Picnic() {
+export default function Contact() {
   return (
 
     
-    <Container maxWidth="lg" id='picnic'>
+    <Container maxWidth="lg" id='contact'>
          <ThemeProvider theme={theme}>
 
       <Divider variant="middle" sx={{borderBottomWidth: 6}}/>
@@ -43,19 +45,19 @@ export default function Picnic() {
         textColor="neutral.500"
         fontWeight= "500"
       >
-        Picnic
+        Contact
       </Typography>
       <Typography variant="h5" align="center" color="text.secondary" paragraph>
-        About the picnic
+        Contact Us
       </Typography>
-            {/* Hero unit */}
-      <Box sx={{ flexGrow: 1 }}>
+    
+          <Box sx={{ flexGrow: 1, m: 3}}>
              <Grid container spacing={2}>
                <Grid item xs={6} marginBottom={4}>
-                 <Item>Picture</Item>
+                 <Item><ContactUs /></Item>
                </Grid>
              <Grid item xs={6} marginBottom={4}>
-               <Item>Agenda and signup</Item>
+               <GoogleMap />
              </Grid>
             </Grid>
           </Box>

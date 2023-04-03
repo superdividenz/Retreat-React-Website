@@ -19,11 +19,11 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
-export default function Contact() {
+export default function Picnic() {
   return (
 
     
-    <Container maxWidth="lg" id='contact'>
+    <Container maxWidth="lg" id='picnic'>
          <ThemeProvider theme={theme}>
 
       <Divider variant="middle" sx={{borderBottomWidth: 6}}/>
@@ -43,19 +43,20 @@ export default function Contact() {
         textColor="neutral.500"
         fontWeight= "500"
       >
-        Contact
+        Picnic
       </Typography>
       <Typography variant="h5" align="center" color="text.secondary" paragraph>
-        Contact Us
+        About the picnic
       </Typography>
-    
-          <Box sx={{ flexGrow: 1 }}>
+            {/* Hero unit */}
+            
+      <Box sx={{ flexGrow: 1 }}>
              <Grid container spacing={2}>
                <Grid item xs={6} marginBottom={4}>
-                 <Item>Contact Form</Item>
+                 <Item>Picture</Item>
                </Grid>
              <Grid item xs={6} marginBottom={4}>
-               <Item>Map</Item>
+               <Item>Agenda and signup</Item>
              </Grid>
             </Grid>
           </Box>
